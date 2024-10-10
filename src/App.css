@@ -2,7 +2,7 @@ html, body {
   height: 110%;
   margin: 0;
   font-family: "Roboto", Arial, sans-serif;
-  background-image: url('public/assets/weather.jpg');
+  background-image: url('./assets/weather.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
