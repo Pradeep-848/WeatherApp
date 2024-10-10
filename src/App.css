@@ -1,0 +1,122 @@
+html, body {
+  height: 110%;
+  margin: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  background-image: url('./src/assets/weather.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1080px;
+  width: 100%; /* Ensure container takes full width on mobile */
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out; /* Smooth transition for layout changes */
+}
+
+.container.search-active {
+  justify-content: flex-start; /* Move content upwards when data is displayed */
+}
+
+.home {
+  text-align: center;
+  color: white;
+}
+
+.home-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+.home-description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: black;
+}
+
+.start-search-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.start-search-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+  html, body {
+    background-size: cover;
+    background-position: center;
+    overflow-y: auto; /* Allow scrolling on smaller screens */
+  }
+
+  .App {
+    padding: 10px; /* Reduce padding for smaller screens */
+    justify-content: flex-start; /* Align content to the top on smaller screens */
+  }
+
+  .container {
+    width: 100%; /* Take full width of the screen */
+    padding: 15px; /* Adjust padding */
+    box-shadow: none; /* Remove box shadow on smaller screens */
+    border-radius: 0; /* Remove border radius */
+  }
+
+  .home-title {
+    font-size: 1.8rem; /* Reduce font size */
+  }
+
+  .home-description {
+    font-size: 1rem; /* Reduce font size */
+  }
+
+  .start-search-button {
+    padding: 8px 16px; /* Smaller button padding */
+    font-size: 0.9rem; /* Smaller button text */
+  }
+
+  .container.search-active {
+    justify-content: flex-start; /* Align to the top on smaller screens when search is active */
+  }
+
+  /* Adjust weather data (if needed) */
+  .current-weather, .forecast {
+    width: 100%; /* Ensure weather data takes full width on mobile */
+    margin-top: 20px; /* Space between elements */
+  }
+}
+
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 1.5rem; /* Further reduce font size for very small screens */
+  }
+
+  .start-search-button {
+    font-size: 0.8rem; /* Smaller button text for small screens */
+    padding: 6px 12px;
+  }
+}
